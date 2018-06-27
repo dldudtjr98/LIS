@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">라이스</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_feed">Feed</string>
+    <string name="title_map">Map</string>
+    <string name="title_myProfile">MyProfile</string>
+    <string name="title_setting">Setting</string>
+    <string name="timerVal">00</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_camera_result">CameraResultActivity</string>
+    <string name="title_activity_make_ping">MakePingActivity</string>
+    <string name="title_activity_kakao_sighnup">kakaoSighnupActivity</string>
+
+</resources>

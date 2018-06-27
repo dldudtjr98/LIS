@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title = "설정">
+        <Preference
+            android:summary=""
+            android:title ="계정설정">
+
+        </Preference>
+        <Preference
+            android:summary=""
+            android:title ="알림설정">
+
+        </Preference>
+        <Preference
+            android:title ="위치설정">
+        </Preference>
+    </PreferenceCategory>
+
+
+
+    <PreferenceCategory android:title = "지원">
+        <Preference
+            android:summary=""
+            android:title ="문제해결">
+
+        </Preference>
+        <Preference
+            android:title ="고객센터">
+        </Preference>
+    </PreferenceCategory>
+
+
+
+    <PreferenceCategory android:title = "more">
+        <Preference
+            android:summary=""
+            android:title ="광고문의">
+
+        </Preference>
+        <Preference
+            android:title ="개인정보">
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

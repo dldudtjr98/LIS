@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#eeeeee"
+    android:orientation="horizontal"
+    android:layout_width="300dp"
+    android:layout_height="100dp">
+<!--
+    <Button
+        android:id="@+id/mealBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/meal"
+        />
+
+    <Button
+        android:id="@+id/cafeBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/cafe"
+        />
+
+    <Button
+        android:id="@+id/soolBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/sool"/>
+
+    <Button
+        android:id="@+id/shoppingBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/shopping" />
+-->
+    <!-- Notice -->
+
+</LinearLayout>

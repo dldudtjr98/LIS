@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dldud.riceapp.MainActivity"
+    >
+
+    <FrameLayout
+        android:id="@+id/ViewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </FrameLayout>
+
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="#696969"
+        app:itemTextColor="#696969"
+        app:layout_behavior="com.dldud.riceapp.BottomNavigationViewBehavior"
+        app:menu="@menu/navigation"
+        tools:layout_editor_absoluteY="501dp" />
+
+
+<!--
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="#696969"
+        app:itemTextColor="#696969"
+        app:menu="@menu/navigation"
+        app:layout_behavior="com.dldud.riceapp.BottomNavigationViewBehavior">
+
+    </android.support.design.widget.BottomNavigationView>
+-->
+
+
+
+</android.support.design.widget.CoordinatorLayout>
