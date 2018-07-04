@@ -1,5 +1,19 @@
 <resources>
 
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="NotoSansTextViewStyle" parent="@android:style/Widget.DeviceDefault.TextView">
+        <item name="android:fontFamily">@font/notosans</item>
+    </style>
+    <style name="NotoSansButtonStyle" parent="@android:style/Widget.DeviceDefault.Button.Borderless">
+        <item name="android:fontFamily">@font/notosans</item>
+    </style>
+    <style name="NotoSansEditTextStyle" parent="@android:style/Widget.DeviceDefault.EditText">
+        <item name="android:fontFamily">@font/notosans</item>
+    </style>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -10,6 +24,9 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="android:buttonStyle">@style/NotoSansButtonStyle</item>
+        <item name="android:editTextStyle">@style/NotoSansEditTextStyle</item>
+        <item name="android:textViewStyle">@style/NotoSansTextViewStyle</item>
 
     </style>
 

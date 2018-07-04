@@ -22,6 +22,7 @@
 
     <Button
         android:id="@+id/videoCancel"
+        android:fontFamily="@font/notosans"
         android:layout_width="70dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
@@ -32,6 +33,7 @@
 
     <Button
         android:id="@+id/pictureOk"
+        android:fontFamily="@font/notosans"
         android:layout_width="70dp"
         android:layout_height="30dp"
         android:layout_marginEnd="8dp"

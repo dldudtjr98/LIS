@@ -8,6 +8,7 @@
 
     <EditText
         android:id="@+id/fbEdit"
+        android:fontFamily="@font/notosans"
         android:layout_width="350dp"
         android:layout_height="450dp"
         android:layout_marginBottom="60dp"
@@ -46,6 +47,7 @@
 
     <TextView
         android:id="@+id/textView3"
+        android:fontFamily="@font/notosans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

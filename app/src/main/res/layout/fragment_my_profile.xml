@@ -24,7 +24,7 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,8 +86,7 @@
     <TextView
         android:id="@+id/myUserName"
         android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:layout_marginLeft="26dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,10 +116,9 @@
 
     <ImageView
         android:id="@+id/bannerImage"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
 
-        android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,12 +137,10 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="312dp"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/border"
         android:gravity="center"
         android:text="Profile"

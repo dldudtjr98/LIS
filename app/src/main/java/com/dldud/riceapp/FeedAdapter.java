@@ -451,8 +451,6 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                         ((CardViewHolder) holder).oFeedMap.setVisibility(View.GONE);
                         ((CardViewHolder) holder).oMapContainer.setVisibility(View.GONE);
                         ((CardViewHolder) holder).oMap.setVisibility(View.GONE);
-                        ((CardViewHolder) holder).oTextReply.setTypeface(null, Typeface.NORMAL);
-                        ((CardViewHolder) holder).oTextReply.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
 
                     } else if (dy < 0 && ((CardViewHolder) holder).oFeedMap.getVisibility() == View.VISIBLE) {
                         // Scrolling down
@@ -460,14 +458,8 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                         ((CardViewHolder) holder).oMapContainer.setVisibility(View.GONE);
                         ((CardViewHolder) holder).oMap.setVisibility(View.GONE);
 
-                        ((CardViewHolder) holder).oTextReply.setTypeface(null, Typeface.NORMAL);
-                        ((CardViewHolder) holder).oTextReply.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
                     } else if (dy > 0) {
-                        ((CardViewHolder) holder).oTextReply.setTypeface(null, Typeface.NORMAL);
-                        ((CardViewHolder) holder).oTextReply.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
                     } else if (dy < 0) {
-                        ((CardViewHolder) holder).oTextReply.setTypeface(null, Typeface.NORMAL);
-                        ((CardViewHolder) holder).oTextReply.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 15);
                     }
                 }
             });

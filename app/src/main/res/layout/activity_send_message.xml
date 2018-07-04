@@ -8,6 +8,7 @@
 
     <TextView
         android:id="@+id/textView2"
+        android:fontFamily="@font/notosans"
         android:layout_width="wrap_content"
         android:layout_height="14dp"
         android:layout_marginEnd="8dp"
@@ -22,6 +23,7 @@
 
     <EditText
         android:id="@+id/editText2"
+        android:fontFamily="@font/notosans"
         android:layout_width="348dp"
         android:layout_height="457dp"
         android:layout_marginEnd="8dp"

@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/shareText"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:gravity="center"
         android:textColor="#FFFFFF"
@@ -28,10 +28,19 @@
         app:layout_constraintTop_toBottomOf="@+id/contentText" />
 
     <TextView
+        android:id="@+id/replyCnt"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/replyContent"
+        app:layout_constraintTop_toBottomOf="@+id/contentText" />
+
+    <TextView
         android:id="@+id/replyContent"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
         android:gravity="center"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/likeText"
@@ -39,13 +48,23 @@
 
     <TextView
         android:id="@+id/likeText"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:gravity="center"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contentText" />
+
+    <TextView
+        android:id="@+id/likeCnt"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/likeText"
+        app:layout_constraintTop_toBottomOf="@+id/contentText" />
+        tools:layout_editor_absoluteY="468dp" />
 
     <Button
         android:id="@+id/mapButton"
@@ -111,26 +130,6 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/bannerImage"
         app:layout_constraintStart_toEndOf="@+id/userImage" />
-
-    <TextView
-        android:id="@+id/replyCnt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/replyContent"
-        app:layout_constraintTop_toBottomOf="@+id/contentText" />
-
-    <TextView
-        android:id="@+id/likeCnt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/likeText"
-        app:layout_constraintTop_toBottomOf="@+id/contentText" />
 
     <View
         android:layout_width="match_parent"

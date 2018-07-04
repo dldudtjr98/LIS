@@ -112,19 +112,26 @@ public class FeedDetailActivity extends AppCompatActivity {
         viewPager = (SwipeViewPager) findViewById(R.id.detailViewPager);
 
         TabLayout tabLayout = (TabLayout)findViewById(R.id.detailTabs);
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_menu_black_24dp));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_menu_black_24dp));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_menu_black_24dp));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.like));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.reply));
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ping));
+        //tabLayout.setupWithViewPager(viewPager);
 
         adapter detailPagerAdapter = new adapter(getSupportFragmentManager());
         viewPager.setAdapter(detailPagerAdapter);
 
         //Set ViewPager Start Position
+
         if(page.equals("2")){
             viewPager.setCurrentItem(1);
+            tabLayout.getTabAt(1).select(); // 탭 또한 처음에 선택되게
         }else if(page.equals("3")){
             viewPager.setCurrentItem(2);
+            tabLayout.getTabAt(2).select();
+        }
+        else {
+            viewPager.setCurrentItem(0);
+            tabLayout.getTabAt(0).select();
         }
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -142,7 +149,7 @@ public class FeedDetailActivity extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
+                viewPager.setCurrentItem(tab.getPosition());
             }
         });
 
@@ -168,6 +175,7 @@ public class FeedDetailActivity extends AppCompatActivity {
     private class adapter extends FragmentStatePagerAdapter {
         public adapter (FragmentManager fm){
             super(fm);
+
         }
 
         @Override

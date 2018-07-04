@@ -9,6 +9,7 @@
 
     <TextView
         android:id="@+id/textView"
+        android:fontFamily="@font/notosans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -20,6 +21,7 @@
 
     <EditText
         android:id="@+id/picContent"
+        android:fontFamily="@font/notosans"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -147,6 +149,7 @@
         app:layout_constraintTop_toTopOf="parent" />
     <CheckBox
         android:id="@+id/picAnonCheck"
+        android:fontFamily="@font/notosans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

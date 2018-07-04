@@ -1,6 +1,7 @@
 package com.dldud.riceapp;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -32,6 +33,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import static com.kakao.util.maps.helper.Utility.getPackageInfo;
 
 
@@ -42,6 +44,7 @@ public class LoginActivity extends BaseActivity {
     private com.kakao.usermgmt.LoginButton btnKakao;
     private SessionCallback callback; // kakao
     private CallbackManager callbackManager; // facebook
+    private Activity curAct;
     LoginButton facebook_login; //facebook
 
 
@@ -71,6 +74,8 @@ public class LoginActivity extends BaseActivity {
 
         ImageView fakeKakao;
 
+        curAct = (Activity) getBaseContext();
+
         setContentView(R.layout.activity_login);
 
         if (Build.VERSION.SDK_INT >= 23){
@@ -91,6 +96,7 @@ public class LoginActivity extends BaseActivity {
         //로그인이력확인
 
         Session.getCurrentSession().checkAndImplicitOpen();
+
 
     }
 
@@ -146,6 +152,7 @@ public class LoginActivity extends BaseActivity {
 
         @Override
         public void onSessionOpened() {
+
             redirectSignupActivity();  // 세션 연결성공 시 redirectSignupActivity() 호출
         }
 
