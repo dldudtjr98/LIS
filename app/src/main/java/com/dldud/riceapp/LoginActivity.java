@@ -74,8 +74,6 @@ public class LoginActivity extends BaseActivity {
 
         ImageView fakeKakao;
 
-        curAct = (Activity) getBaseContext();
-
         setContentView(R.layout.activity_login);
 
         if (Build.VERSION.SDK_INT >= 23){

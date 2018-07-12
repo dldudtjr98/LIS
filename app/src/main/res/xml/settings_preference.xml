@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title = "설정">
-        <Preference
+        <PreferenceScreen
+            android:key="preference_sub"
             android:summary=""
             android:title ="계정설정">
+            <Preference
+            android:title="프로필 바꾸기"
+                />
+            <Preference
+                android:title="계정탈퇴"
+                />
 
-        </Preference>
-        <Preference
+
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="preference_sub"
             android:summary=""
             android:title ="알림설정">
+            <!--
+            <SwitchPreference
+                android:title="알림설정"
+                android:summary="서브화면"
+                />
 
-        </Preference>
-        <Preference
-            android:title ="위치설정">
-        </Preference>
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="keyword"
+                android:title="키워드 알림"
+                android:summary="등록된 키워드가 포함된 알림은 알림이 꺼져있어도 알림을 받습니다"
+                />
+-->
+        </PreferenceScreen>
     </PreferenceCategory>
 
 
@@ -25,7 +43,13 @@
 
         </Preference>
         <Preference
+            android:key="sendMessageQA"
             android:title ="고객센터">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.dldud.riceapp"
+                android:targetClass="com.dldud.riceapp.FeedBackDialog"
+                />
         </Preference>
     </PreferenceCategory>
 
@@ -33,11 +57,18 @@
 
     <PreferenceCategory android:title = "more">
         <Preference
+            android:key="sendMessageAD"
             android:summary=""
             android:title ="광고문의">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.dldud.riceapp"
+                android:targetClass="com.dldud.riceapp.ContactUsDialog"
+                />
 
         </Preference>
         <Preference
+            android:key=""
             android:title ="개인정보">
         </Preference>
     </PreferenceCategory>

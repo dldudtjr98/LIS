@@ -200,24 +200,13 @@ public class MapFragment extends Fragment implements MapView.MapViewEventListene
     @Override
     public void onPOIItemSelected(MapView mapView, MapPOIItem mapPOIItem) {
 
-        int curTag = mapPOIItem.getTag();
-        String curAddress = "";
+        MapPoint mapPoint = mapPOIItem.getMapPoint();
+        double latitude = mapPoint.getMapPointGeoCoord().latitude;
+        double longitude = mapPoint.getMapPointGeoCoord().longitude;
 
-        for(ItemData i : itemList) {
-            if (i.getiMarkerIndex() == curTag) {
-                curAddress = i.getStrAddress();
-                break;
-            }
-        }
-
-        ArrayList<Integer> arr = new ArrayList<>();
-        for(ItemData i : itemList)
-            if(curAddress.equals(i.getStrAddress()))
-                arr.add(i.getiMarkerIndex());
-
-        Intent intent = new Intent(getActivity(),FeedDialog.class);
-        intent.putExtra("indexs", arr);
-
+        Intent intent = new Intent(getActivity(), MapPingActivity.class);
+        intent.putExtra("longitude",longitude);
+        intent.putExtra("latitude",latitude);
         startActivity(intent);
     }
 
@@ -234,7 +223,8 @@ public class MapFragment extends Fragment implements MapView.MapViewEventListene
 
     @Override
     public void onMapViewZoomLevelChanged(MapView mapView, int i) {
-
+        String zoomLevel = Integer.toString(i);
+        Log.e("ZoomLevel:",zoomLevel);
     }
 
     @Override
