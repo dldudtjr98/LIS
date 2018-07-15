@@ -1,37 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
     <PreferenceCategory android:title = "설정">
-        <PreferenceScreen
-            android:key="preference_sub"
+        <Preference
+            android:key="profileKey"
             android:summary=""
             android:title ="계정설정">
-            <Preference
-            android:title="프로필 바꾸기"
-                />
-            <Preference
-                android:title="계정탈퇴"
-                />
 
+        </Preference>
 
-        </PreferenceScreen>
-        <PreferenceScreen
+        <Preference
             android:key="preference_sub"
             android:summary=""
             android:title ="알림설정">
-            <!--
-            <SwitchPreference
-                android:title="알림설정"
-                android:summary="서브화면"
-                />
 
-            <SwitchPreference
-                android:defaultValue="false"
-                android:key="keyword"
-                android:title="키워드 알림"
-                android:summary="등록된 키워드가 포함된 알림은 알림이 꺼져있어도 알림을 받습니다"
-                />
--->
-        </PreferenceScreen>
+        </Preference>
     </PreferenceCategory>
 
 
@@ -44,11 +27,18 @@
         </Preference>
         <Preference
             android:key="sendMessageQA"
-            android:title ="고객센터">
+            android:title ="고객센터"
+            android:summary="GMail로 연결됩니다">
+            <!--
             <intent
                 android:action="android.intent.action.MAIN"
                 android:targetPackage="com.dldud.riceapp"
                 android:targetClass="com.dldud.riceapp.FeedBackDialog"
+                />
+                -->
+            <intent
+                android:action="android.intent.action.SENDTO"
+                android:data="mailto:dldudtjr98@gmail.com"
                 />
         </Preference>
     </PreferenceCategory>
@@ -58,12 +48,11 @@
     <PreferenceCategory android:title = "more">
         <Preference
             android:key="sendMessageAD"
-            android:summary=""
+            android:summary="GMail로 연결됩니다"
             android:title ="광고문의">
             <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.dldud.riceapp"
-                android:targetClass="com.dldud.riceapp.ContactUsDialog"
+                android:action="android.intent.action.SENDTO"
+                android:data="mailto:dldudtjr98@gmail.com"
                 />
 
         </Preference>

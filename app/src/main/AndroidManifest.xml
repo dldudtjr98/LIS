@@ -109,6 +109,7 @@
             android:name=".ContactUsDialog"
              />
 
+
         <activity
             android:name=".FeedDetailActivity"
             android:windowSoftInputMode="adjustNothing" />

@@ -49,5 +49,7 @@
         <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
     </style>
 
+    <style name="PreferenceLocalTheme" parent="@style/PreferenceThemeOverlay"/>
+
 
 </resources>
