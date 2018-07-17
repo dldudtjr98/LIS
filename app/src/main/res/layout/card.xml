@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/userImage"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,6 +22,7 @@
         android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/replyContent"
@@ -32,6 +33,7 @@
         android:layout_width="10dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/replyContent"
         app:layout_constraintTop_toBottomOf="@+id/contentText" />
@@ -41,6 +43,7 @@
         android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/likeText"
@@ -51,6 +54,7 @@
         android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +65,7 @@
         android:layout_width="10dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/likeText"
         app:layout_constraintTop_toBottomOf="@+id/contentText" />
@@ -70,8 +75,8 @@
         android:id="@+id/mapButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
         android:background="@drawable/ic_location_on_white_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/shareText"
@@ -84,6 +89,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

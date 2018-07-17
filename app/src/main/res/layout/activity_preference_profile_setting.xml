@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.dldud.riceapp.UserProfileSettingActivity">
+    tools:context="com.dldud.riceapp.PreferenceProfileSettingActivity">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -75,14 +75,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-
-
         <Button
             android:id="@+id/setFinBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/simple_next_btn"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </android.support.constraint.ConstraintLayout>

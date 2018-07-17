@@ -1,6 +1,7 @@
 package com.dldud.riceapp;
 
 import android.app.Activity;
+import android.location.Location;
 import android.opengl.Visibility;
 import android.os.Bundle;
 import android.os.Handler;
@@ -387,8 +388,19 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
                     oItem.douLatitude = Double.parseDouble(locationLat[linearNum - (i + 1)]);
                     oItem.douLongitude = Double.parseDouble(locationLong[linearNum - (i + 1)]);
                     oItem.strVideo = imgUrl + banner[linearNum - (i + 1)];
-                    oItem.pingDistance = Math.sqrt(Math.pow((latitude - oItem.douLatitude),2) + Math.pow((longitude - oItem.douLongitude),2));
-                    oItem.strDistance = String.valueOf(oItem.pingDistance);
+                    //oItem.pingDistance = Math.sqrt(Math.pow((latitude - oItem.douLatitude),2) + Math.pow((longitude - oItem.douLongitude),2));
+                    oItem.pingDistance = (int)DistanceByDegreeAndroid(latitude,longitude,oItem.douLatitude,oItem.douLongitude);
+
+
+                    if(oItem.pingDistance>=1000){
+                        oItem.strDistance = "약 " + (int)(oItem.pingDistance/1000) + "km 떨어짐";
+                    } else if(oItem.pingDistance<1000 && oItem.pingDistance>=100){
+                        oItem.strDistance = "약 " + oItem.pingDistance + "m 떨어짐";
+                    } else if(oItem.pingDistance<100 && oItem.pingDistance>=50){
+                        oItem.strDistance = "100m 이내";
+                    } else if(oItem.pingDistance<50){
+                        oItem.strDistance = "내 근처";
+                    }
 
                     SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.KOREA);
                     Date d2 = f.parse(create_date[linearNum - (i + 1)]);
@@ -511,8 +523,18 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
                                 oItem.douLatitude = Double.parseDouble(locationLat[linearNum - (i + 1)]);
                                 oItem.douLongitude = Double.parseDouble(locationLong[linearNum - (i + 1)]);
                                 oItem.strVideo = imgUrl + banner[linearNum - (i + 1)];
-                                oItem.pingDistance = Math.sqrt(Math.pow((latitude - oItem.douLatitude),2) + Math.pow((longitude - oItem.douLongitude),2));
-                                oItem.strDistance = String.valueOf(oItem.pingDistance);
+                                oItem.pingDistance = (int)DistanceByDegreeAndroid(latitude,longitude,oItem.douLatitude,oItem.douLongitude);
+
+
+                                if(oItem.pingDistance>=1000){
+                                    oItem.strDistance = "약 " + (int)(oItem.pingDistance/1000) + "km 떨어짐";
+                                } else if(oItem.pingDistance<1000 && oItem.pingDistance>=100){
+                                    oItem.strDistance = "약 " + oItem.pingDistance + "m 떨어짐";
+                                } else if(oItem.pingDistance<100 && oItem.pingDistance>=50){
+                                    oItem.strDistance = "100m 이내";
+                                } else if(oItem.pingDistance<50){
+                                    oItem.strDistance = "내 근처";
+                                }
 
                                 if (!oItem.strUserId.equals("0")) {
                                     for (int j = 0; j < userLinearNum; j++) {
@@ -579,8 +601,18 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
 
                             oItem.douLatitude = Double.parseDouble(locationLat[linearNum - (i + 1)]);
                             oItem.douLongitude = Double.parseDouble(locationLong[linearNum - (i + 1)]);
-                            oItem.pingDistance = Math.sqrt(Math.pow((latitude - oItem.douLatitude),2) + Math.pow((longitude - oItem.douLongitude),2));
-                            oItem.strDistance = String.valueOf(oItem.pingDistance);
+                            oItem.pingDistance = (int)DistanceByDegreeAndroid(latitude,longitude,oItem.douLatitude,oItem.douLongitude);
+
+
+                            if(oItem.pingDistance>=1000){
+                                oItem.strDistance = "약 " + (int)(oItem.pingDistance/1000) + "km 떨어짐";
+                            } else if(oItem.pingDistance<1000 && oItem.pingDistance>=100){
+                                oItem.strDistance = "약 " + oItem.pingDistance + "m 떨어짐";
+                            } else if(oItem.pingDistance<100 && oItem.pingDistance>=50){
+                                oItem.strDistance = "100m 이내";
+                            } else if(oItem.pingDistance<50){
+                                oItem.strDistance = "내 근처";
+                            }
 
                             oItem.strIdx = idx[linearNum - (i + 1)];
                             oItem.strLike = "좋아요";
@@ -698,8 +730,18 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
 
                             oItem.douLatitude = Double.parseDouble(locationLat[linearNum - (i + 1)]);
                             oItem.douLongitude = Double.parseDouble(locationLong[linearNum - (i + 1)]);
-                            oItem.pingDistance = Math.sqrt(Math.pow((latitude - oItem.douLatitude), 2) + Math.pow((longitude - oItem.douLongitude), 2));
-                            oItem.strDistance = String.valueOf(oItem.pingDistance);
+                            oItem.pingDistance = (int)DistanceByDegreeAndroid(latitude,longitude,oItem.douLatitude,oItem.douLongitude);
+
+
+                            if(oItem.pingDistance>=1000){
+                                oItem.strDistance = "약 " + (int)(oItem.pingDistance/1000) + "km 떨어짐";
+                            } else if(oItem.pingDistance<1000 && oItem.pingDistance>=100){
+                                oItem.strDistance = "약 " + oItem.pingDistance + "m 떨어짐";
+                            } else if(oItem.pingDistance<100 && oItem.pingDistance>=50){
+                                oItem.strDistance = "100m 이내";
+                            } else if(oItem.pingDistance<50){
+                                oItem.strDistance = "내 근처";
+                            }
 
                             oItem.strIdx = idx[linearNum - (i + 1)];
                             oItem.strLike = "좋아요";
@@ -832,8 +874,18 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
                 oItem.douLatitude = Double.parseDouble(locationLat[linearNum - (i + 1)]);
                 oItem.douLongitude = Double.parseDouble(locationLong[linearNum - (i + 1)]);
                 oItem.strVideo = imgUrl + banner[linearNum - (i + 1)];
-                oItem.pingDistance = Math.sqrt(Math.pow((latitude - oItem.douLatitude),2) + Math.pow((longitude - oItem.douLongitude),2));
-                oItem.strDistance = String.valueOf(oItem.pingDistance);
+                oItem.pingDistance = (int)DistanceByDegreeAndroid(latitude,longitude,oItem.douLatitude,oItem.douLongitude);
+
+
+                if(oItem.pingDistance>=1000){
+                    oItem.strDistance = "약 " + (int)(oItem.pingDistance/1000) + "km 떨어짐";
+                } else if(oItem.pingDistance<1000 && oItem.pingDistance>=100){
+                    oItem.strDistance = "약 " + oItem.pingDistance + "m 떨어짐";
+                } else if(oItem.pingDistance<100 && oItem.pingDistance>=50){
+                    oItem.strDistance = "100m 이내";
+                } else if(oItem.pingDistance<50){
+                    oItem.strDistance = "내 근처";
+                }
 
                 SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.KOREA);
                 Date d2 = f.parse(create_date[linearNum - (i + 1)]);
@@ -925,8 +977,18 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
 
                 oItem.douLatitude = Double.parseDouble(locationLat[linearNum - (i + 1)]);
                 oItem.douLongitude = Double.parseDouble(locationLong[linearNum - (i + 1)]);
-                oItem.pingDistance = Math.sqrt(Math.pow((latitude - oItem.douLatitude),2) + Math.pow((longitude - oItem.douLongitude),2));
-                oItem.strDistance = String.valueOf(oItem.pingDistance);
+                oItem.pingDistance = (int)DistanceByDegreeAndroid(latitude,longitude,oItem.douLatitude,oItem.douLongitude);
+
+
+                if(oItem.pingDistance>=1000){
+                    oItem.strDistance = "약 " + (int)(oItem.pingDistance/1000) + "km 떨어짐";
+                } else if(oItem.pingDistance<1000 && oItem.pingDistance>=100){
+                    oItem.strDistance = "약 " + oItem.pingDistance + "m 떨어짐";
+                } else if(oItem.pingDistance<100 && oItem.pingDistance>=50){
+                    oItem.strDistance = "100m 이내";
+                } else if(oItem.pingDistance<50){
+                    oItem.strDistance = "내 근처";
+                }
 
                 oItem.strIdx = idx[linearNum - (i + 1)];
                 oItem.strLike = "좋아요";
@@ -1016,6 +1078,20 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
         oAdapter.addAll(load);
     }
 
+    //안드로이드 - 두지점(위도,경도) 사이의 거리
+    public double DistanceByDegreeAndroid(double _latitude1, double _longitude1, double _latitude2, double _longitude2){
+        Location startPos = new Location("PointA");
+        Location endPos = new Location("PointB");
+
+        startPos.setLatitude(_latitude1);
+        startPos.setLongitude(_longitude1);
+        endPos.setLatitude(_latitude2);
+        endPos.setLongitude(_longitude2);
+
+        double distance = startPos.distanceTo(endPos);
+
+        return distance;
+    }
 
 
 }

@@ -94,5 +94,9 @@ public class MainActivity extends AppCompatActivity {
         } else{
             navigation.setSelectedItemId(R.id.navigation_camera);
         }
+
+        if(getIntent().getIntExtra("fragmentNumber",0)==2){
+            navigation.setSelectedItemId(R.id.navigation_setting);
+        }
     }
 }

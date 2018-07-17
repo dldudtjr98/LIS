@@ -38,6 +38,7 @@
         <item name="android:windowBackground">@drawable/rice</item>
     </style>
 
+
     <style name="Dialog" parent="Theme.AppCompat.Dialog">
         <item name="android:textColorPrimary">#FFFFFF</item>    <!--content text color-->
 

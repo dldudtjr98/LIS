@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title = "설정">
+    <PreferenceCategory android:title = "계정설정">
         <Preference
             android:key="profileKey"
-            android:summary=""
-            android:title ="계정설정">
+            android:summary="프로필 사진, 별명을 변경합니다"
+            android:title ="프로필설정">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.dldud.riceapp"
+                android:targetClass="com.dldud.riceapp.PreferenceProfileSettingActivity"
+                />
 
         </Preference>
-
         <Preference
-            android:key="preference_sub"
-            android:summary=""
-            android:title ="알림설정">
+            android:key="accountKey"
+            android:summary="계정을 탈퇴합니다"
+            android:title ="계정탈퇴">
 
         </Preference>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title ="알림설정">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="alarmKey"
+            android:summary="어플리케이션 알림 유무를 설정합니다"
+            android:title = "알림"
+            />
+
+
     </PreferenceCategory>
 
 
@@ -58,7 +75,11 @@
         </Preference>
         <Preference
             android:key=""
-            android:title ="개인정보">
+            android:title ="개인정보 취급방침">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.dldud.riceapp"
+                android:targetClass="com.dldud.riceapp.Privacy"/>
         </Preference>
     </PreferenceCategory>
 </PreferenceScreen>

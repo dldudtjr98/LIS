@@ -4,6 +4,7 @@ package com.dldud.riceapp;
 
 import android.os.Bundle;
 
+import android.preference.PreferenceFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -15,20 +16,16 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SettingFragment extends Fragment{
+public class SettingFragment extends PreferenceFragmentCompat {
 
     public SettingFragment() {
 
     }
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_setting, container, false);
-        getActivity().getSupportFragmentManager().beginTransaction()
-                .replace(android.R.id.content, new MyPreferenceFragment(),null).commit();
 
-        return v;
+
+    @Override
+    public void onCreatePreferences(Bundle bundle, String s) {
+        addPreferencesFromResource(R.xml.settings_preference);
     }
 
 

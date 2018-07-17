@@ -23,7 +23,7 @@
         android:layout_height="60dp"
         android:layout_gravity="bottom"
         android:background="@color/colorPrimary"
-        app:itemIconTint="#696969"
+        app:itemIconTint="@color/bnv_color_selector"
         app:itemTextColor="#696969"
         app:layout_behavior="com.dldud.riceapp.BottomNavigationViewBehavior"
         app:menu="@menu/navigation"
