@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.dldud.riceapp.VideoTransActivity">
-
+<!--
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -17,7 +17,7 @@
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vidContent" />
-
+-->
     <EditText
         android:id="@+id/vidContent"
         android:layout_width="match_parent"
@@ -58,7 +58,7 @@
         </RelativeLayout>
     </FrameLayout>
 
-
+<!--
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -122,13 +122,13 @@
 
         </RadioGroup>
     </LinearLayout>
-
+-->
     <Button
         android:id="@+id/vidCancelBtn"
         android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:background="@drawable/back_btn"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -146,10 +146,10 @@
 
     <Button
         android:id="@+id/vidSendBtn"
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="55dp"
+        android:layout_height="25dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_weight="1"
         android:background="@drawable/insert_btn"
         app:layout_constraintEnd_toEndOf="parent"

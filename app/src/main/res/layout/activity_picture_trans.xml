@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.dldud.riceapp.PictureTransActivity">
-
+<!--
     <TextView
         android:id="@+id/textView"
         android:fontFamily="@font/notosans"
@@ -17,7 +17,7 @@
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/picContent" />
-
+-->
 
     <EditText
         android:id="@+id/picContent"
@@ -60,7 +60,7 @@
         </RelativeLayout>
     </FrameLayout>
 
-
+<!--
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -124,14 +124,13 @@
 
         </RadioGroup>
     </LinearLayout>
-
-
+-->
     <Button
         android:id="@+id/picCancelBtn"
         android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:background="@drawable/back_btn"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -139,10 +138,10 @@
 
     <Button
         android:id="@+id/picSendBtn"
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="55dp"
+        android:layout_height="25dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_weight="1"
         android:background="@drawable/insert_btn"
         app:layout_constraintEnd_toEndOf="parent"

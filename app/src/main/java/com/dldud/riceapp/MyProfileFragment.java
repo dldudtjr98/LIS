@@ -86,7 +86,7 @@ public class MyProfileFragment extends Fragment {
         //feedGrid = (GridView)v.findViewById(R.id.imageGrid);
 
         profileMyPing = (TextView)v.findViewById(R.id.myPingNum);
-        profileLikePing = (TextView)v.findViewById(R.id.sharedPingNum);
+
 
         try {
             userString = taskUser.execute("http://52.78.18.156/public/user_db.php").get();
@@ -133,7 +133,6 @@ public class MyProfileFragment extends Fragment {
                 }
             }
 
-            profileLikePing.setText(Integer.toString(myLike.size()));
             profileMyPing.setText(Integer.toString(myPing.size()));
         }catch(InterruptedException e){
             e.printStackTrace();
@@ -211,6 +210,7 @@ public class MyProfileFragment extends Fragment {
         public ProfileAdapter (FragmentManager fm){
             super(fm);
         }
+
 
         @Override
         public Fragment getItem(int position) {

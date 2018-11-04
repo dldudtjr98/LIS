@@ -30,7 +30,7 @@
 
     <TextView
         android:id="@+id/replyCnt"
-        android:layout_width="10dp"
+        android:layout_width="28dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -62,7 +62,7 @@
 
     <TextView
         android:id="@+id/likeCnt"
-        android:layout_width="10dp"
+        android:layout_width="28dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"

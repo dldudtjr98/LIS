@@ -83,7 +83,7 @@ public class VideoTransActivity extends AppCompatActivity {
         //gif = (GifImageView)findViewById(R.id.loadImg);
 
 
-        rg = (RadioGroup)findViewById(R.id.filterVidGroup);
+       // rg = (RadioGroup)findViewById(R.id.filterVidGroup);
 
         Button cancel = (Button) findViewById(R.id.vidCancelBtn);
         cancel.setOnClickListener(cancelTrans);
@@ -137,11 +137,12 @@ public class VideoTransActivity extends AppCompatActivity {
                 latitude = mapPointGeo.latitude;
                 longitude = mapPointGeo.longitude;
 
+                /*
                 int id = rg.getCheckedRadioButtonId();
 
                 RadioButton rb = (RadioButton) findViewById(id);
                 filter = rb.getResources().getResourceEntryName(rb.getId());
-
+*/
 
                 vidContent = setText.getText().toString();
 
@@ -180,7 +181,7 @@ public class VideoTransActivity extends AppCompatActivity {
                 String formatDate = sdfNow.format(date);
 
                 PHPRequest request = new PHPRequest(insertUrlPath);
-                String result = request.PhPtest(UserId, filter ,uploadFileNameVideo, uploadFileNameThumbnail, vidContent, locationLat, locationLong, formatDate);
+                String result = request.PhPtest(UserId, null ,uploadFileNameVideo, uploadFileNameThumbnail, vidContent, locationLat, locationLong, formatDate);
                 if(result.equals("1")){
                     Toast.makeText(getApplication(),"전송완료",Toast.LENGTH_SHORT).show();
                 } else {
@@ -301,7 +302,7 @@ public class VideoTransActivity extends AppCompatActivity {
                             String msg = "File Upload Completed.\n\n See uploaded file here : \n\n"
                                     + uploadFileNameVideo;
 
-                            Toast.makeText(VideoTransActivity.this, "File Upload Complete.",
+                            Toast.makeText(VideoTransActivity.this, "게시를 완료하였습니다! 지금 바로 피드에서 확인하세요!",
                                     Toast.LENGTH_SHORT).show();
                         }
                     });

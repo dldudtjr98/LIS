@@ -1,19 +1,25 @@
 package com.dldud.riceapp;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatDialog;
 import android.util.Log;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.AutocompleteFilter;
@@ -30,6 +36,16 @@ import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapReverseGeoCoder;
 import net.daum.mf.map.api.MapView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -56,8 +72,12 @@ public class MapFragment extends Fragment implements MapView.MapViewEventListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View v = inflater.inflate(R.layout.fragment_map, container, false);
+
         //GPSTracker class
         GPSInfo gps;
+
 
         mapView = new MapView(getActivity());
 
@@ -65,7 +85,7 @@ public class MapFragment extends Fragment implements MapView.MapViewEventListene
         final CameraUpdateFactory cameraUpdateFactory = new CameraUpdateFactory();
 
 
-        View v = inflater.inflate(R.layout.fragment_map, container, false);
+
         ViewGroup mapViewContainer = (ViewGroup) v.findViewById(R.id.map_view);
         mapViewContainer.addView(mapView);
 
@@ -143,13 +163,17 @@ public class MapFragment extends Fragment implements MapView.MapViewEventListene
         mapView.setPOIItemEventListener(this);
         mapView.setCurrentLocationEventListener(this);
 
-        loadPOI();
+    loadPOI();
 
 
         return v;
     }
 
-    public void loadPOI()
+
+
+
+
+   public void loadPOI()
     {
         mapView.removeAllPOIItems();
         itemList.clear();
@@ -294,7 +318,7 @@ public class MapFragment extends Fragment implements MapView.MapViewEventListene
 
     @Override
     public void onReverseGeoCoderFoundAddress(MapReverseGeoCoder mapReverseGeoCoder, String s) { // 주소 찾은 경우
-        //mapReverseGeoCoder.onAddressFound();
+    //mapReverseGeoCoder.onAddressFound();
 
 
         Log.e("map", s);

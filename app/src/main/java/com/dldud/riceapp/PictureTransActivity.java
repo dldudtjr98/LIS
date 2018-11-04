@@ -62,7 +62,7 @@ public class PictureTransActivity extends AppCompatActivity {
         setText = (EditText)findViewById(R.id.picContent);
         picCheck = (CheckBox)findViewById(R.id.picAnonCheck);
 
-        rg = (RadioGroup)findViewById(R.id.filterPicGroup);
+       // rg = (RadioGroup)findViewById(R.id.filterPicGroup);
 
         Button cancel = (Button) findViewById(R.id.picCancelBtn);
         cancel.setOnClickListener(cancelTrans);
@@ -104,11 +104,11 @@ public class PictureTransActivity extends AppCompatActivity {
             MapPoint.GeoCoordinate mapPointGeo = mapViewFix.getMapCenterPoint().getMapPointGeoCoord();
             latitude = mapPointGeo.latitude;
             longitude = mapPointGeo.longitude;
-
+/*
             int id = rg.getCheckedRadioButtonId();
             RadioButton rb = (RadioButton)findViewById(id);
             filter = rb.getResources().getResourceEntryName(rb.getId());
-
+*/
             picContent = setText.getText().toString();
 
             dialog = ProgressDialog.show(PictureTransActivity.this,"","파일을 업로드 중입니다...",true);
@@ -143,7 +143,7 @@ public class PictureTransActivity extends AppCompatActivity {
                 String formatDate = sdfNow.format(date);
 
                 PHPRequest request = new PHPRequest(insertUrlPath);
-                String result = request.PhPtest(UserId,filter ,uploadFileName, uploadFileName, picContent, locationLat, locationLong, formatDate);
+                String result = request.PhPtest(UserId, null ,uploadFileName, uploadFileName, picContent, locationLat, locationLong, formatDate);
                 if(result.equals("1")){
                     Toast.makeText(getApplication(),"전송완료",Toast.LENGTH_SHORT).show();
                 } else {
@@ -247,7 +247,7 @@ public class PictureTransActivity extends AppCompatActivity {
                             String msg = "File Upload Completed.\n\n See uploaded file here : \n\n"
                                     + uploadFileName;
 
-                            Toast.makeText(PictureTransActivity.this, "File Upload Complete.",
+                            Toast.makeText(PictureTransActivity.this, "게시를 완료하였습니다! 지금 바로 피드에서 확인하세요!",
                                     Toast.LENGTH_SHORT).show();
                         }
                     });

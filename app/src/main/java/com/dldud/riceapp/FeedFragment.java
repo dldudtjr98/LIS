@@ -100,14 +100,19 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
         fabBack = (ConstraintLayout)v.findViewById(R.id.fabOn);
         fabOpen = (FloatingActionButton)v.findViewById(R.id.fabOpen);
 
+
         fab = (FloatingActionButton) v.findViewById(R.id.fab);
         fab1 = (FloatingActionButton)v.findViewById(R.id.fab1);
         fab2 = (FloatingActionButton)v.findViewById(R.id.fab2);
+        fabOpen.setImageResource(R.drawable.ic_list);
+        fab.setImageResource(R.drawable.white_x_btn);
+        fab1.setImageResource(R.drawable.like_off);
+        fab2.setImageResource(R.drawable.ic_drive);
 
         fab_open = AnimationUtils.loadAnimation(getActivity(), R.anim.fab_open);
         fab_close = AnimationUtils.loadAnimation(getActivity(),R.anim.fab_close);
-        rotate_forward = AnimationUtils.loadAnimation(getActivity(),R.anim.rotate_forward);
-        rotate_backward = AnimationUtils.loadAnimation(getActivity(),R.anim.rotate_backward);
+        //rotate_forward = AnimationUtils.loadAnimation(getActivity(),R.anim.rotate_forward);
+        //rotate_backward = AnimationUtils.loadAnimation(getActivity(),R.anim.rotate_backward);
 
         oData = new ArrayList<>();
 
@@ -149,7 +154,7 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
                 }
             };
             fab_close.setAnimationListener(closeAnimationListener);
-            fab.startAnimation(rotate_backward);
+            //fab.startAnimation(rotate_backward);
             fab1.startAnimation(fab_close);
             fab2.startAnimation(fab_close);
             fab1.setClickable(false);
@@ -181,7 +186,7 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
             public void onClick(View view) {
             fabBack.setVisibility(View.VISIBLE);
             fabOpen.setVisibility(View.GONE);
-            fab.startAnimation(rotate_forward);
+            //fab.startAnimation(rotate_forward);
             fab1.startAnimation(fab_open);
             fab2.startAnimation(fab_open);
             fab1.setClickable(true);
@@ -220,7 +225,7 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
                     }
                 };
                 fab_close.setAnimationListener(closeAnimationListener);
-                fab.startAnimation(rotate_backward);
+                //fab.startAnimation(rotate_backward);
                 fab1.startAnimation(fab_close);
                 fab2.startAnimation(fab_close);
                 fab1.setClickable(false);
@@ -260,7 +265,7 @@ public class FeedFragment extends Fragment implements FeedAdapter.OnLoadMoreList
                     }
                 };
                 fab_close.setAnimationListener(closeAnimationListener);
-                fab.startAnimation(rotate_backward);
+                //fab.startAnimation(rotate_backward);
                 fab1.startAnimation(fab_close);
                 fab2.startAnimation(fab_close);
                 fab1.setClickable(false);

@@ -22,23 +22,23 @@
 
     <Button
         android:id="@+id/videoCancel"
-        android:fontFamily="@font/notosans"
         android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/recamera_btn"
+        android:fontFamily="@font/notosans"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/pictureOk"
-        android:fontFamily="@font/notosans"
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/next_btn"
+        android:fontFamily="@font/notosans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

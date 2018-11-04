@@ -335,16 +335,16 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
 
                         LocationTemplate params = LocationTemplate.newBuilder("성남시 분당구 판교역로 235",
-                                ContentObject.newBuilder("여기는 고정텍스트 (UI필요)",
+                                ContentObject.newBuilder(contentText,
                                         item.getStrThumbnailImage(),
                                         LinkObject.newBuilder()
                                                 .setWebUrl("https://developers.kakao.com")
                                                 .setMobileWebUrl("https://developers.kakao.com")
                                                 .build())
-                                        .setDescrption(contentText).build())
+                                        .setDescrption("여기에 주소를 넣으면 될것 같음").build())
                                 .setSocial(SocialObject.newBuilder().setLikeCount(item.getPingLike())
                                         .setCommentCount(item.getPingReply())
-                                        .setSharedCount(333).build())
+                                        .build())
                                 .setAddressTitle("카카오 판교오피스")
                                 .build();
 
@@ -473,8 +473,12 @@ public class FeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             ((CardViewHolder) holder).oImageUser.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
+
+                    /*
                     navigation.setTag(item.strUserId);
                     navigation.setSelectedItemId(R.id.navigation_myProfile);
+                    */
                 }
             });
 

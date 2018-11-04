@@ -37,7 +37,12 @@ public class LikePingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        if(getArguments() != null) {
+            userId = getArguments().getString("userId");
+        }
+
         View v = inflater.inflate(R.layout.fragment_like_ping, container, false);
+        userIdx = userId;
 
         RecyclerView recyclerView = (RecyclerView)v.findViewById(R.id.recycler_grid);
 

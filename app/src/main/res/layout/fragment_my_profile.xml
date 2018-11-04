@@ -12,13 +12,12 @@
         android:id="@+id/myPingNum"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
         android:text="0"
-        app:layout_constraintStart_toEndOf="@+id/bannerImage"
-        app:layout_constraintTop_toBottomOf="@+id/myPing" />
+        app:layout_constraintStart_toEndOf="@+id/myPing"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayout"
@@ -34,54 +33,14 @@
             android:id="@+id/tabItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_menu_black_24dp" />
+            android:icon="@drawable/ping" />
 
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_place_black_24dp" />
+            android:icon="@drawable/like" />
 
     </android.support.design.widget.TabLayout>
-
-    <TextView
-        android:id="@+id/sharedPingNum"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center_horizontal"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@+id/myPingNum"
-        app:layout_constraintTop_toBottomOf="@+id/sharedPing" />
-
-    <TextView
-        android:id="@+id/connectedPingNum"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center_horizontal"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@+id/sharedPingNum"
-        app:layout_constraintTop_toBottomOf="@+id/connectedPing" />
-
-    <TextView
-        android:id="@+id/connectedPing"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center_horizontal"
-        android:text="커넥팅"
-        app:layout_constraintStart_toEndOf="@+id/sharedPing"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/sharedPing"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center_horizontal"
-        android:text="공유핑"
-        app:layout_constraintStart_toEndOf="@+id/myPing"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/myUserName"
@@ -94,13 +53,12 @@
 
     <TextView
         android:id="@+id/myPing"
-        android:layout_width="60dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
-        android:text="마이핑"
+        android:text="생성한 핑"
         app:layout_constraintStart_toEndOf="@+id/bannerImage"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -143,7 +101,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/border"
         android:gravity="center"
-        android:text="Profile"
+        android:text="사용자 프로필"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

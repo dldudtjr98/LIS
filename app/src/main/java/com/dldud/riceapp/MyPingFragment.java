@@ -37,9 +37,16 @@ public class MyPingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
         View v = inflater.inflate(R.layout.fragment_my_ping, container, false);
+        if(getArguments() != null) {
+            userId = getArguments().getString("userId");
+        }
 
         userIdx = userId;
+
 
         RecyclerView recyclerView = (RecyclerView)v.findViewById(R.id.recycler_grid);
 

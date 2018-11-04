@@ -39,6 +39,7 @@ public class Task extends AsyncTask<String, Void, String>{
     public ArrayList<String> locationlong = new ArrayList<>();
     public ArrayList<String> create_date = new ArrayList<>();
 
+
     @Override
     protected String doInBackground(String... params) {
         String serverURL = params[0];
